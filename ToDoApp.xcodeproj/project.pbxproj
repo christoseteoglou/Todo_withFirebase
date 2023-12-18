@@ -11,6 +11,12 @@
 		925E5B762B30E1C5003B5551 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925E5B752B30E1C5003B5551 /* ContentView.swift */; };
 		925E5B782B30E1C6003B5551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925E5B772B30E1C6003B5551 /* Assets.xcassets */; };
 		925E5B7B2B30E1C6003B5551 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925E5B7A2B30E1C6003B5551 /* Preview Assets.xcassets */; };
+		925E5B832B30E322003B5551 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 925E5B822B30E322003B5551 /* FirebaseAnalytics */; };
+		925E5B852B30E322003B5551 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 925E5B842B30E322003B5551 /* FirebaseAnalyticsOnDeviceConversion */; };
+		925E5B872B30E322003B5551 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 925E5B862B30E322003B5551 /* FirebaseAnalyticsSwift */; };
+		925E5B892B30E322003B5551 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 925E5B882B30E322003B5551 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		925E5B8B2B30E322003B5551 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 925E5B8A2B30E322003B5551 /* FirebaseAppCheck */; };
+		925E5B8D2B30E36E003B5551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925E5B8C2B30E36E003B5551 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,7 @@
 		925E5B752B30E1C5003B5551 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		925E5B772B30E1C6003B5551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925E5B7A2B30E1C6003B5551 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		925E5B8C2B30E36E003B5551 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925E5B872B30E322003B5551 /* FirebaseAnalyticsSwift in Frameworks */,
+				925E5B832B30E322003B5551 /* FirebaseAnalytics in Frameworks */,
+				925E5B852B30E322003B5551 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				925E5B8B2B30E322003B5551 /* FirebaseAppCheck in Frameworks */,
+				925E5B892B30E322003B5551 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +63,7 @@
 		925E5B722B30E1C5003B5551 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				925E5B8C2B30E36E003B5551 /* GoogleService-Info.plist */,
 				925E5B732B30E1C5003B5551 /* ToDoAppApp.swift */,
 				925E5B752B30E1C5003B5551 /* ContentView.swift */,
 				925E5B772B30E1C6003B5551 /* Assets.xcassets */,
@@ -83,6 +96,13 @@
 			dependencies = (
 			);
 			name = ToDoApp;
+			packageProductDependencies = (
+				925E5B822B30E322003B5551 /* FirebaseAnalytics */,
+				925E5B842B30E322003B5551 /* FirebaseAnalyticsOnDeviceConversion */,
+				925E5B862B30E322003B5551 /* FirebaseAnalyticsSwift */,
+				925E5B882B30E322003B5551 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				925E5B8A2B30E322003B5551 /* FirebaseAppCheck */,
+			);
 			productName = ToDoApp;
 			productReference = 925E5B702B30E1C5003B5551 /* ToDoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 925E5B672B30E1C5003B5551;
+			packageReferences = (
+				925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 925E5B712B30E1C5003B5551 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +150,7 @@
 			files = (
 				925E5B7B2B30E1C6003B5551 /* Preview Assets.xcassets in Resources */,
 				925E5B782B30E1C6003B5551 /* Assets.xcassets in Resources */,
+				925E5B8D2B30E36E003B5551 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +302,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,8 +330,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +366,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		925E5B822B30E322003B5551 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		925E5B842B30E322003B5551 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		925E5B862B30E322003B5551 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		925E5B882B30E322003B5551 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		925E5B8A2B30E322003B5551 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925E5B812B30E322003B5551 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 925E5B682B30E1C5003B5551 /* Project object */;
 }
